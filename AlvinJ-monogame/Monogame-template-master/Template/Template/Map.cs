@@ -31,11 +31,19 @@ namespace Template
 
         public void Creat()
         {
-            for(int i = 5; i>=0; i--)
+            for (int i = 5; i>=0; i--)
             {
                 for(int o = 20; o >= 0; o--)
                 {
                     map[o, i] = 0;
+                }
+            }
+
+            for (int i = 10; i >= 0; i--)
+            {
+                for (int o = 20; o >= 0; o--)
+                {
+                    map[10+10 *o,10 + 10 * i] = 1;
                 }
             }
 
@@ -44,16 +52,17 @@ namespace Template
 
         public void Draw(SpriteBatch spritebatch)
         {
-            for(int i = y-1; i >= 0; i--)
-            {
-                for (int o = x-1; o >= 0; o--)
-                {
-                    if (map[i, o] == 1)
-                    {
-                        spritebatch.Draw(house, new Rectangle(o*10, i*10, o*2, i*2), Color.Black);
-                    }
-                }
-            }
+             
+             for (int i = y - 1; i >= 0; i--)
+             {
+                 for (int o = x - 1; o >= 0; o--)
+                 {
+                     if (map[i, o] == 1)
+                     {
+                         spritebatch.Draw(house, new Rectangle(o * 10, i * 10, o * 2, i * 2), Color.Black);
+                     }
+                 }
+             }
         }
     }
 }

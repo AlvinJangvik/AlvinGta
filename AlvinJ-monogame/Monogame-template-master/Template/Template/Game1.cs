@@ -42,7 +42,7 @@ namespace Template
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
             player = new Player(Content.Load<Texture2D>("svart"), new Vector2(10, 10));
-            map = new Map(41, 41, Content.Load<Texture2D>("svart"));
+            map = new Map(500, 500, Content.Load<Texture2D>("svart"));
             // TODO: use this.Content to load your game content here 
         }
 
